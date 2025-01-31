@@ -1,6 +1,12 @@
 import streamlit as st
 import os
 
+st.set_page_config(
+    page_title="Portfolio de Claire Mercier",
+    page_icon="✨",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
 # Détection de la taille de l'écran
 if "screen_width" not in st.session_state:
     st.session_state["screen_width"] = 800  # Valeur par défaut
@@ -15,13 +21,6 @@ else:
 
 print("Current working directory:", os.getcwd())
 print("Config file exists:", os.path.exists(".streamlit/config.toml"))
-
-st.set_page_config(
-    page_title="Portfolio de Claire Mercier",
-    page_icon="✨",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
 
 st.markdown(
     """
