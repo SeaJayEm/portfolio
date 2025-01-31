@@ -13,15 +13,6 @@ if "screen_width" not in st.session_state:
 
 screen_width = st.session_state["screen_width"]
 
-# Si l'écran est petit, on met le menu en haut de la page
-if screen_width < 600:
-    selection = st.radio("Menu", ["Page 1", "Page 2", "Page 3"])
-else:
-    selection = st.sidebar.radio("Menu", ["Page 1", "Page 2", "Page 3"])
-
-print("Current working directory:", os.getcwd())
-print("Config file exists:", os.path.exists(".streamlit/config.toml"))
-
 st.markdown(
     """
     <style>
