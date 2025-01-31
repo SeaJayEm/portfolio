@@ -1,14 +1,10 @@
 import streamlit as st
-import os
-
-print("Current working directory:", os.getcwd())
-print("Config file exists:", os.path.exists(".streamlit/config.toml"))
 
 st.set_page_config(
     page_title="Portfolio de Claire Mercier",
     page_icon="✨",
     layout="wide",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="collapsed",
 )
 
 st.markdown(
@@ -18,32 +14,46 @@ st.markdown(
             background-image: url("https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
             background-size: cover;
         }
-        [data-testid="stSidebar"] {
-        background-color: transparent; /* Couleur de fond */
-        background-size: cover;
-        min-width: 250px; /* Largeur minimale */
-        max-width: 250px; /* Largeur maximale */
-        }
         html, body, [class*="css"], h1, h2, h3, h4, h5, h6, p, li, span, div {
-        color: #2e2e36 !important;
-    }
+            color: #2e2e36 !important;
+        }
+        .stButton > button {
+        background-color: #f3dcd2 !important; /* Couleur de fond verte */
+        color: white !important; /* Couleur du texte blanche */
+        border: none !important;
+        border-radius: 5px !important;
+        padding: 10px 20px !important;
+        }
+        .stButton > button:hover {
+        background-color: #c3abb3 !important; /* Couleur au survol légèrement différente */
+        }
     </style>
     """,
     unsafe_allow_html=True,
 )
 
-# Création du menu
-with st.sidebar:
-    st.markdown(
-        """
-        <h2 style="font-weight: bold; margin-bottom: -40px; margin-top: 30px">Menu</h2>
-        """,
-        unsafe_allow_html=True
-    )
-    selection = st.radio(
-        "",
-        ("Qui suis-je ?", "Dashboard \"Indices de Développement Humain\"", "Dashboard de KPI Toys & Models", "Moteur de recommandation de films")
-    )
+# Initialiser la sélection si elle n'existe pas
+if 'selection' not in st.session_state:
+    st.session_state.selection = "Qui suis-je ?"
+
+# Créer des colonnes pour les boutons
+col1, col2, col3, col4 = st.columns(4)
+
+with col1:
+    if st.button("Qui suis-je ?", key="btn1", use_container_width=True):
+        st.session_state.selection = "Qui suis-je ?"
+
+with col2:
+    if st.button("Dashboard IDH", key="btn2", use_container_width=True):
+        st.session_state.selection = "Dashboard \"Indices de Développement Humain\""
+
+with col3:
+    if st.button("KPI Toys & Models", key="btn3", use_container_width=True):
+        st.session_state.selection = "Dashboard de KPI Toys & Models"
+
+with col4:
+    if st.button("Recommandation Films", key="btn4", use_container_width=True):
+        st.session_state.selection = "Moteur de recommandation de films"
 
 def afficher_contenu(selection):
     if selection == "Qui suis-je ?":
@@ -155,8 +165,8 @@ def afficher_contenu(selection):
         unsafe_allow_html=True
         )
 
+# Appeler la fonction avec la sélection courante
+afficher_contenu(st.session_state.selection)
 
 
-# Affichage du contenu en fonction de la sélection
-afficher_contenu(selection)
 
