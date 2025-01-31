@@ -1,6 +1,18 @@
 import streamlit as st
 import os
 
+# Détection de la taille de l'écran
+if "screen_width" not in st.session_state:
+    st.session_state["screen_width"] = 800  # Valeur par défaut
+
+screen_width = st.session_state["screen_width"]
+
+# Si l'écran est petit, on met le menu en haut de la page
+if screen_width < 600:
+    selection = st.radio("Menu", ["Page 1", "Page 2", "Page 3"])
+else:
+    selection = st.sidebar.radio("Menu", ["Page 1", "Page 2", "Page 3"])
+
 print("Current working directory:", os.getcwd())
 print("Config file exists:", os.path.exists(".streamlit/config.toml"))
 
@@ -32,17 +44,22 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Création du menu
-with st.sidebar:
-    st.markdown(
-        """
-        <h2 style="font-weight: bold; margin-bottom: -40px; margin-top: 30px">Menu</h2>
-        """,
-        unsafe_allow_html=True
-    )
+# Sidebar pour grand écran, menu en haut pour mobile
+if st.session_state["screen_width"] > 600:
+    with st.sidebar:
+        st.markdown("<h2 style='font-weight: bold;'>Menu</h2>", unsafe_allow_html=True)
+        selection = st.radio(
+            "",
+            ("Qui suis-je ?", "Dashboard \"Indices de Développement Humain\"", 
+             "Dashboard de KPI Toys & Models", "Moteur de recommandation de films")
+        )
+else:
+    st.markdown("<h2 style='font-weight: bold; text-align:center;'>Menu</h2>", unsafe_allow_html=True)
     selection = st.radio(
         "",
-        ("Qui suis-je ?", "Dashboard \"Indices de Développement Humain\"", "Dashboard de KPI Toys & Models", "Moteur de recommandation de films")
+        ("Qui suis-je ?", "Dashboard \"Indices de Développement Humain\"", 
+         "Dashboard de KPI Toys & Models", "Moteur de recommandation de films"),
+        horizontal=True
     )
 
 def afficher_contenu(selection):
