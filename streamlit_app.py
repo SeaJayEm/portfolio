@@ -11,7 +11,20 @@ st.set_page_config(
 if "screen_width" not in st.session_state:
     st.session_state["screen_width"] = 800  # Valeur par défaut
 
-screen_width = st.session_state["screen_width"]
+# JavaScript pour récupérer la largeur de l'écran et mettre à jour Streamlit
+st.markdown(
+    """
+    <script>
+    function sendWidth() {
+        let screenWidth = window.innerWidth;
+        window.parent.postMessage({screen_width: screenWidth}, "*");
+    }
+    sendWidth();
+    window.addEventListener("resize", sendWidth);
+    </script>
+    """,
+    unsafe_allow_html=True
+)
 
 st.markdown(
     """
