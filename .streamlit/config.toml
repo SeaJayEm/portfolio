@@ -1,0 +1,41 @@
+[theme]
+base = "light"
+# Couleur d'arrière-plan principale (gris très clair)
+backgroundColor = "#F8F9FA"  # Un fond gris clair, facile à lire et apaisant
+# Couleur du texte (gris foncé, contraste bien avec le fond clair)
+textColor = "#212529"  # Gris foncé, qui a un bon contraste avec un fond clair
+# Couleur d'arrière-plan secondaire (gris clair pour les sections)
+secondaryBackgroundColor = "#E9ECEF"  # Gris légèrement plus foncé pour les sections secondaires
+# Couleur des boutons (bleu vif mais accessible)
+primaryColor = "#bfa4a9"  # Bleu vif (couleur bien visible pour les boutons et actions)
+sidebarTextColor = "#2e2e36"  # Gris moyen pour le texte de la barre latérale
+# Bordure des éléments de la barre latérale et des cartes (gris neutre)
+borderColor = "#CED4DA"  # Gris très clair, agréable visuellement sans trop de contraste
+# Couleur des liens (bleu foncé, pour bien ressortir mais être agréable)
+linkColor = "#FFFFF"  # Bleu foncé pour les liens et éléments cliquables
+# Texte des boutons (blanc pour ressortir sur fond bleu)
+buttonColor = "#FFFFFF"  # Texte des boutons en blanc pour un bon contraste
+# Bordure des boutons (bleu, en harmonie avec le fond des boutons)
+buttonBorderColor = "#bfa4a9"  # Bordure bleue pour les boutons pour maintenir la cohérence
+# Couleur des sliders (dégradé de bleu accessible pour l'interactivité)
+sliderColor = "#bfa4a9"  # Couleur bleue pour les sliders pour qu'ils ressortent bien
+# Couleur de la barre de sélection des sliders (pointe et remplissage)
+sliderTrackColor = "#B8DAFF"  # Bleu clair pour la barre de fond du slider, pas trop agressif
+# Couleur des checkboxes (gris foncé pour le contraste, avec bleu pour l'interaction)
+checkboxColor = "#bfa4a9"  # Bleu pour les cases sélectionnées
+# Couleur des boutons radio (bleu, pour l'interaction, mais pas trop vif)
+radioButtonColor = "#bfa4a9"  # Bleu pour les boutons radio
+# Couleur des sélecteurs de dates (gris très clair pour les éléments non sélectionnés, bleu pour l'interaction)
+dateSelectorColor = "#bfa4a9"  # Bleu pour les éléments sélectionnés
+# Couleur des champs de texte (gris clair pour le fond, texte foncé)
+inputFieldBackgroundColor = "#FFFFFF"  # Fond des champs de texte en blanc
+inputFieldTextColor = "#2e2e36"  # Texte dans les champs de saisie, gris foncé pour le contraste
+# Couleur des éléments de dropdown (similaire aux autres éléments interactifs)
+selectboxColor = "#bfa4a9"  # Bleu pour les menus déroulants sélectionnés
+selectboxBackgroundColor = "#FFFFFF"  # Fond blanc pour la sélection des options
+
+[server]
+runOnSave = true
+
+[browser]
+gatherUsageStats = false
