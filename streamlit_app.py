@@ -21,7 +21,7 @@ st.markdown(
         }
         .stButton > button {
         background-color: #acaab8 !important; 
-        color: white !important; 
+        color: #2e2e36 !important; 
         border: none !important;
         border-radius: 5px !important;
         padding: 10px 20px !important;
@@ -86,6 +86,7 @@ def afficher_contenu(selection):
     if selection == "Qui suis-je ?":
         st.markdown(
         """
+        <br>
         <h3 style="font-weight: bold;">Bienvenue sur mon portfolio !</h2>
         <p>Bonjour ! 👋 Moi c'est Claire Mercier.</p>
         Ingénieur agro 🍕 et docteur en microbiologie 🔬 de formation, j'ai décidé en 2024 de suivre une formation de Data Analyst avec la 
