@@ -16,11 +16,7 @@ st.markdown(
             padding-top: 0px !important;
             margin-top: -20px !important;  /* Ajuste selon besoin */
         }
-        .block-container {
-        padding-top: 0px !important;
-        margin-top: -20px !important; /* Ajuste cette valeur si nécessaire */
-        }
-        html, body, [class*="css"], h1, h2, h3, h4, h5, h6, p, li, span, div {
+        html, body, [class*="css"], h1, h2, h3, h4, h5, h6, p, li, span, div {S
             color: #2e2e36 !important;
         }
         .stButton > button {
