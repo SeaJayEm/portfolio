@@ -176,7 +176,7 @@ def afficher_contenu(selection):
         st.markdown(
         """
         <h2 style="font-weight: bold;">Projet de Dashboard de KPI pour l'entreprise Toys & Models</h2>
-        <p>Ce projet a été réalisé avec mon équipe de la Wilde Code School. L'objectif était la conception d’un tableau de bord interactif pour Toys & Models, 
+        <p>Ce projet a été réalisé avec mon équipe de la Wild Code School. L'objectif était la conception d’un tableau de bord interactif pour Toys & Models, 
         une entreprise spécialisée dans les maquettes et jouets réduits 🚗.</p>
         <p>Les KPI demandés par le client portaient sur :</p>
         <ul>
@@ -206,7 +206,7 @@ def afficher_contenu(selection):
         st.markdown(
         """
         <h2 style="font-weight: bold;">Projet de moteur de recommandation de films</h2>
-        <p>Ce projet a été réalisé avec mon équipe de la Wilde Code School. L'objectif était de créer un moteur de 
+        <p>Ce projet a été réalisé avec mon équipe de la Wild Code School. L'objectif était de créer un moteur de 
         recommandation de films 🎥 pour un cinéma (fictif) de la Réunion.</p>
         <p>Notre étude de marché préalable a été basée sur l'extraction des données d'un site réunionnais spécialisé dans
         le cinéma 🍿 par webscraping. Notre analyse a démontré que les réunionnais avaient une préférence pour le cinéma des années 60 à 70.
