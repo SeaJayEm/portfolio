@@ -29,7 +29,8 @@ st.markdown(
         }
 
         #MainMenu {visibility: hidden;}  /* Cache le menu principal */
-        #footer {visibility: hidden;}    /* Cache le footer */
+        footer {visibility: hidden;}    /* Cache le footer */
+        header {visibility: hidden;}
 
         .responsive-iframe {
             position: relative;
