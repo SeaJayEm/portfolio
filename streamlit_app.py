@@ -25,7 +25,31 @@ st.markdown(
         padding: 10px 20px !important;
         }
         .stButton > button:hover {
-        background-color: #acaab8 !important; /* Couleur au survol légèrement différente */
+        background-color: #c3abb3 !important; /* Couleur au survol légèrement différente */
+        }
+
+        #MainMenu {visibility: hidden;}  /* Cache le menu principal */
+        #footer {visibility: hidden;}    /* Cache le footer */
+
+        .responsive-iframe {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* Ratio 16:9 */
+        }
+        .responsive-iframe iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            border: none;
+        }
+        .iframe-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
         }
     </style>
     """,
@@ -60,7 +84,7 @@ def afficher_contenu(selection):
         st.markdown(
         """
         <h3 style="font-weight: bold;">Bienvenue sur mon portfolio !</h2>
-        <p>Bonjour ! 👋 Moi c'est Claire Mercier. 😁</p>
+        <p>Bonjour ! 👋 Moi c'est Claire Mercier.</p>
         Ingénieur agro 🍕 et docteur en microbiologie 🔬 de formation, j'ai décidé en 2024 de suivre une formation de Data Analyst avec la 
         <a href="https://www.wildcodeschool.com/fr-fr/formation-data-analyst" target="_blank" style="text-decoration: bold;"> 
         Wild Code School </a>. Je suis passionnée depuis toujours par les sciences, les données et la programmation. J'aime apprendre constamment et relever de 
@@ -95,7 +119,11 @@ def afficher_contenu(selection):
             Le deuxième onglet se focalise sur l'année 2021 📷, la dernière année disponible dans le dataset utilisé, tandis que le troisième onglet 
             permet d'afficher l'IDH, l'IDH ajusté aux inégalités, l'IDH ajusté à la durabilité, 
             et l'indice d'égalité entre les genres par pays et par année. N'hésitez-pas à faire vos propres recherches sur cet outil 💡 !</p>
-            <iframe title="HDI" width="740" height="473.5" src="https://app.powerbi.com/view?r=eyJrIjoiZjUyZWZjNjUtNzY4NC00ZjJjLWEzYzctY2Y3NmY1MTM4MWYxIiwidCI6IjkzZGMyZjFmLWM1MTUtNGMzYi04ZDlhLTY5YjM3NjcwZGJlZSJ9" frameborder="0" allowFullScreen="true"></iframe>'
+            <div class="iframe-container">
+                <div class="responsive-iframe">
+                    <iframe title="HDI" src="https://app.powerbi.com/view?r=eyJrIjoiZjUyZWZjNjUtNzY4NC00ZjJjLWEzYzctY2Y3NmY1MTM4MWYxIiwidCI6IjkzZGMyZjFmLWM1MTUtNGMzYi04ZDlhLTY5YjM3NjcwZGJlZSJ9" allowFullScreen="true"></iframe>
+                </div>
+            </div>            
             <br><br>
             <p>Voici la stack technique utilisée pour ce mini projet :</p>
             <ul>
@@ -123,7 +151,11 @@ def afficher_contenu(selection):
             <li>Les aspects logistiques (onglet 3)</li>
             <li>Les indicateurs RH (onglet 4)</li>
         </ul>
-        <iframe title="dashboard_toys_and_models (1)" width="740" height="473.5" src="https://app.powerbi.com/view?r=eyJrIjoiMTIzOWJkMzYtNmJlNS00ZjZhLTljMjctZjE5MmRhMTA1NWFlIiwidCI6IjkzZGMyZjFmLWM1MTUtNGMzYi04ZDlhLTY5YjM3NjcwZGJlZSJ9" frameborder="0" allowFullScreen="true"></iframe>
+        <div class="iframe-container">
+            <div class="responsive-iframe">
+                <iframe title="dashboard_toys_and_models (1)" src="https://app.powerbi.com/view?r=eyJrIjoiMTIzOWJkMzYtNmJlNS00ZjZhLTljMjctZjE5MmRhMTA1NWFlIiwidCI6IjkzZGMyZjFmLWM1MTUtNGMzYi04ZDlhLTY5YjM3NjcwZGJlZSJ9" allowFullScreen="true"></iframe>
+            </div>
+        </div>
         <p>Voici la stack technique utilisée pour ce projet :</p>
             <ul>
                 <li>Analyse des données via le schéma de base de données fourni 🔎</li>
