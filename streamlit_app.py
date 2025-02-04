@@ -88,11 +88,30 @@ def afficher_contenu(selection):
         """
         <br>
         <h3 style="font-weight: bold;">Bienvenue sur mon portfolio !</h2>
-        <p>Bonjour ! 👋 Moi c'est Claire Mercier.</p>
-        Ingénieur agro 🍕 et docteur en microbiologie 🔬 de formation, j'ai décidé en 2024 de suivre une formation de Data Analyst avec la 
-        <a href="https://www.wildcodeschool.com/fr-fr/formation-data-analyst" target="_blank" style="text-decoration: bold;"> 
-        Wild Code School </a>. Je suis passionnée depuis toujours par les sciences, les données et la programmation. J'aime apprendre constamment et relever de 
-        nouveaux défis 💪 et la data me semble le terrain de jeu idéal pour cela !</p>
+                               """,
+        unsafe_allow_html=True
+    )
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown(
+        """
+         <br>
+        <p>Bonjour ! 👋 Moi c'est <b>Claire Mercier</b>.</p>
+        <br>
+        <p>Ingénieure agroalimentaire 🍕 et docteure en microbiologie 🔬, j'ai toujours été passionnée 
+        par les sciences, les données et la programmation. En 2024, j'ai décidé d'approfondir ces 
+        domaines en suivant une formation de Data Analyst avec la <a href="https://www.wildcodeschool.com/fr-fr/formation-data-analyst" target="_blank" style="font-weight: bold;">Wild Code School</a>. </p></p>
+        <p>Après plusieurs années en recherche et en enseignement, ma curiosité m’a naturellement menée 
+        vers la data. J’aime apprendre, relever de nouveaux défis 💪 et transformer les données en insights 
+        concrets. J’ai hâte de mettre mes compétences au service de projets innovants… Peut-être avec vous ?</p>
+                """,
+        unsafe_allow_html=True
+    )
+        with col2:
+            st.image("https://github.com/SeaJayEm/portfolio/raw/refs/heads/main/images/DSCF7064.JPG")
+        
+        st.markdown(
+        """
         <p>Ce portfolio, en cours de réalisation, vous permettra de voir les différents projets que j'ai pu réaliser grâce
         à mes nouvelles compétences :</p>
         <ul>
@@ -201,6 +220,3 @@ def afficher_contenu(selection):
 
 # Appeler la fonction avec la sélection courante
 afficher_contenu(st.session_state.selection)
-
-
-
