@@ -18,14 +18,14 @@ st.markdown(
             color: #2e2e36 !important;
         }
         .stButton > button {
-        background-color: #f3dcd2 !important; /* Couleur de fond verte */
-        color: white !important; /* Couleur du texte blanche */
+        background-color: #acaab8 !important; 
+        color: white !important; 
         border: none !important;
         border-radius: 5px !important;
         padding: 10px 20px !important;
         }
         .stButton > button:hover {
-        background-color: #c3abb3 !important; /* Couleur au survol légèrement différente */
+        background-color: #acaab8 !important; /* Couleur au survol légèrement différente */
         }
     </style>
     """,
@@ -60,12 +60,10 @@ def afficher_contenu(selection):
         st.markdown(
         """
         <h3 style="font-weight: bold;">Bienvenue sur mon portfolio !</h2>
-        <p>Bonjour ! 👋</p>
-        <p>Moi c'est Claire Mercier. 😁</p>
-        Initialement ingénieur agro 🍕 et docteur en microbiologie 🔬 de formation, j'ai décidé en 2024 de suivre une formation de Data Analyst avec la 
+        <p>Bonjour ! 👋 Moi c'est Claire Mercier. 😁</p>
+        Ingénieur agro 🍕 et docteur en microbiologie 🔬 de formation, j'ai décidé en 2024 de suivre une formation de Data Analyst avec la 
         <a href="https://www.wildcodeschool.com/fr-fr/formation-data-analyst" target="_blank" style="text-decoration: bold;"> 
-        Wild Code School </a>.</p>
-        <p>Je suis passionnée depuis toujours par les sciences, les données et la programmation. J'aime apprendre constamment et relever de 
+        Wild Code School </a>. Je suis passionnée depuis toujours par les sciences, les données et la programmation. J'aime apprendre constamment et relever de 
         nouveaux défis 💪 et la data me semble le terrain de jeu idéal pour cela !</p>
         <p>Ce portfolio, en cours de réalisation, vous permettra de voir les différents projets que j'ai pu réaliser grâce
         à mes nouvelles compétences :</p>
