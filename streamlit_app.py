@@ -62,7 +62,7 @@ st.markdown(
 image_html = """
     <style>
         .responsive-image {
-            max-width: 500px;   /* Limite la largeur à 800px */
+            max-width: 380px;   /* Limite la largeur à 800px */
             height: auto;       /* Maintien le ratio de l'image */
         }
     </style>
